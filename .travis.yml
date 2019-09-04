@@ -6,6 +6,11 @@ services:
   - docker
   
 script:
+
+  - chmod +x hello.py
+  - ./hello.py
+  - docker build --tag hello:v1
+ 
   - docker pull hello-world 
   - docker run -d hello-world
   - docker ps
